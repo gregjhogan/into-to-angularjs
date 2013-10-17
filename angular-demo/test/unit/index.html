@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <title>Jasmine Spec Runner</title>
+
+    <link href="../../lib/jasmine/jasmine.css" rel="stylesheet">
+    <script src="../../lib/jasmine/jasmine.js"></script>
+    <script src="../../lib/jasmine/jasmine-html.js"></script>
+
+    <!-- include source files here... -->
+    <script src="../../lib/angular/angular.js"></script>
+    <script src="../../lib/angular/angular-route.js"></script>
+    <script src="../../lib/angular/angular-mocks.js"></script>
+    <script src="../../app/app.js"></script>
+    <script src="../../app/services/calculatorService.js"></script>
+
+    <!-- include spec files here... -->
+    <script src="calculatorServiceTests.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            var jasmineEnv = jasmine.getEnv();
+            jasmineEnv.updateInterval = 1000;
+
+            var htmlReporter = new jasmine.HtmlReporter();
+
+            jasmineEnv.addReporter(htmlReporter);
+
+            jasmineEnv.specFilter = function (spec) {
+                return htmlReporter.specFilter(spec);
+            };
+
+            var currentWindowOnload = window.onload;
+
+            window.onload = function () {
+                if (currentWindowOnload) {
+                    currentWindowOnload();
+                }
+
+                execJasmine();
+            };
+
+            function execJasmine() {
+                jasmineEnv.execute();
+            }
+        })();
+    </script>
+</head>
+<body></body>
+</html>

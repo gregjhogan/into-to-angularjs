@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html ng-app="my-app">
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+        
+        <link href="lib/css-reset/reset.css" rel="stylesheet" />
+        <link href="app/app.css" rel="stylesheet" />
+        <link href="app/controllers/presidents/presidents.css" rel="stylesheet" />
+
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular/angular-route.js"></script>
+
+        <script src="app/app.js"></script>
+        <script src="app/directives/header/headerController.js"></script>
+        <script src="app/directives/header/headerDirective.js"></script>
+        <script src="app/directives/header/headerService.js"></script>
+        <script src="app/services/calculatorService.js"></script>
+        <script src="app/controllers/default/defaultController.js"></script>
+        <script src="app/controllers/calculator/calculatorController.js"></script>
+        <script src="app/controllers/calculator2/calculator2Controller.js"></script>
+        <script src="app/controllers/presidents/presidentsController.js"></script>
+    </head>
+    <body>
+        <div ng-view></div>
+    </body>
+</html>

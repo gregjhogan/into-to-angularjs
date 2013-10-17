@@ -1,0 +1,7 @@
+﻿.presidentsView td {
+    padding-right: 16px;
+}
+
+.presidentsView .state {
+    color: gray;
+}

@@ -1,0 +1,13 @@
+﻿<div my-header></div>
+<div class="presidentsView">
+    <div>
+        <input type="text" ng-model="search" placeholder="Search"/>
+    </div>
+    <table>
+        <tr ng-repeat="person in list | filter:customFilter">
+            <td>{{person.order}}</td>
+            <td>{{person.name}}</td>
+            <td class="state">({{person.state}})</td>
+        </tr>
+    </table>
+</div>
